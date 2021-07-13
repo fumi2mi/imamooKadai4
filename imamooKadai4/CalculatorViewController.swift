@@ -14,11 +14,15 @@ class CalculatorViewController: UIViewController {
 
     @IBAction private func incrementButtonPressed(_ sender: UIButton) {
         resultInt += 1
-        label.text = String(resultInt)
+        updateLabel()
     }
 
     @IBAction private func clearButtonPressed(_ sender: UIButton) {
         resultInt = 0
-        label.text = "0"
+        updateLabel()
+    }
+
+    private func updateLabel() {
+        label.text = String(resultInt)
     }
 }
